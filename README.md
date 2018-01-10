@@ -1,6 +1,6 @@
-# main.java.me.joshmcfarlin.AstroIDE
+# AstroIDE
 
-A multi-platform main.java.me.joshmcfarlin.AstroIDE with syntax highlighting support for over **110 languages**. Written in Java utilizing JavaFX and Ace.js for syntax highlighting.
+An IDE with syntax highlighting support for over **110 languages**. Written in Java utilizing JavaFX and Ace.js for syntax highlighting.
 
 ## Status
 
@@ -10,11 +10,11 @@ While the base of the application has been created, a few unfinished things are:
 
 ## Images
 
-![Main main.java.me.joshmcfarlin.AstroIDE design](Images/main.png)
+![Main AstroIDE design](Images/main.png)
 
 ![Showing search function](Images/search.png)
 
-## Language Support
+## Supported Languages
 
 * ABAP
 * ABC
