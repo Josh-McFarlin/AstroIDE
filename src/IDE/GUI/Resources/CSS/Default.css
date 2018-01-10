@@ -1,0 +1,101 @@
+.root {
+    -fx-focus-color: transparent;
+    -fx-faint-focus-color: transparent;
+}
+
+#fileTree {
+    -fx-box-border: transparent;
+    -fx-background-insets: 0em, 0em, 0em, 0em;
+    -fx-border-style: solid;
+    -fx-border-width: 0 2 0 0;
+    -fx-border-color: #073642;
+    -fx-background-color: #002B36;
+}
+
+#fileView {
+    -fx-background-color: #002B36;
+    -fx-border-style: none;
+    -fx-border-color: transparent;
+}
+
+#fileTree .tree-cell {
+    -fx-background-color: #002B36;
+    -fx-text-fill: #eee8d5;
+}
+
+#fileTree .tree-cell:hover {
+    -fx-background-color: #073642;
+}
+
+#fileTree .tree-cell:empty {
+    -fx-background-color: transparent;
+}
+
+#fileTree .tree-cell > .tree-disclosure-node > .arrow  {
+    -fx-background-color: #eee8d5;
+}
+
+.tabTextArea {
+    -fx-background-color: #002B36;
+}
+
+.TabHolder {
+    -fx-tab-min-width: 90px;
+    -fx-background-color: #002B36;
+    -fx-fill: #002B36;
+}
+
+.TabHolder .tab-header-area .tab-header-background {
+    -fx-background-color: #073642;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+}
+
+.TabHolder .tab-header-area {
+    -fx-background-insets: 0, 0 0 1 0;
+    -fx-padding: 0.5em 0.2em 0.0em 4em;
+}
+
+.TabHolder .tabDesign {
+    -fx-background-insets: 3 3 0 3, 0, 0;
+    -fx-border-insets: 3 3 0 3, 0, 0;
+    -fx-padding: 5 15 0 15;
+    -fx-background-color: #002b36;
+    -fx-border-style: solid;
+    -fx-border-color: black;
+    -fx-border-width: 0 0 1 0;
+}
+
+.TabHolder .tabDesign:selected {
+    -fx-border-width: 1 1 0 1;
+    -fx-border-radius: 4 4 0 0;
+}
+
+.TabHolder .tab-label {
+    -fx-alignment: CENTER;
+    -fx-text-fill: #586e75;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+}
+
+.TabHolder .tabDesign:selected .tab-label {
+    -fx-text-fill: #eee8d5;
+}
+
+.lineno {
+    -fx-background-color: #073642;
+    -fx-text-fill: #586e75;
+}
+
+#split:horizontal > .split-pane-divider {
+    -fx-background-color: transparent;
+}
+
+#split > .split-pane-divider {
+    -fx-padding: 0 0.001em 0 0.001em;
+}
+
+#split {
+    -fx-background-color: #002B36;
+}

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.input.KeyCodeCombination?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import IDE.GUI.Components.*?>
+
+<VBox id="vBox" fx:id="vBox" prefHeight="900.0" prefWidth="1280.0" stylesheets="@../CSS/Default.css"
+      xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="IDE.GUI.Controllers.AppController">
+    <children>
+        <MenuBar fx:id="menuBar" styleClass="MenuBar" VBox.vgrow="NEVER">
+            <menus>
+                <Menu mnemonicParsing="false" styleClass="MenuType" text="File">
+                    <items>
+                        <MenuItem fx:id="createTabButton" mnemonicParsing="false" onAction="#createTab"
+                                  styleClass="MenuButton" text="New">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="N" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="openFileButton" mnemonicParsing="false" onAction="#openFile"
+                                  styleClass="MenuButton" text="Open File">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="O" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="openDirectoryButton" mnemonicParsing="false" onAction="#openDirectory"
+                                  styleClass="MenuButton" text="Open Directory">
+                        </MenuItem>
+                        <Menu fx:id="openRecentDrop" mnemonicParsing="false" styleClass="MenuButton"
+                              text="Open Recent"/>
+                        <SeparatorMenuItem mnemonicParsing="false" styleClass="MenuSeperator"/>
+                        <MenuItem fx:id="closeTabButton" mnemonicParsing="false" onAction="#closeTab"
+                                  styleClass="MenuButton" text="Close Tab">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="E" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveFileButton" mnemonicParsing="false" onAction="#saveFile"
+                                  styleClass="MenuButton" text="Save">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="saveAsButton" mnemonicParsing="false" onAction="#saveFileAs"
+                                  styleClass="MenuButton" text="Save As…"/>
+                        <SeparatorMenuItem mnemonicParsing="false" styleClass="MenuSeperator"/>
+                        <MenuItem fx:id="settingsButton" mnemonicParsing="false" onAction="#openSettings"
+                                  styleClass="MenuButton" text="Preferences…"/>
+                        <SeparatorMenuItem mnemonicParsing="false" styleClass="MenuSeperator"/>
+                        <MenuItem fx:id="quitAppButton" mnemonicParsing="false" onAction="#quitApp"
+                                  styleClass="MenuButton" text="Quit">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="ESCAPE" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="MenuType" text="Edit">
+                    <items>
+                        <MenuItem fx:id="undoButton" mnemonicParsing="false" onAction="#undoFile" text="Undo">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="redoButton" mnemonicParsing="false" onAction="#redoFile" text="Redo">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="Z" control="DOWN" meta="UP" shift="DOWN"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="cutButton" mnemonicParsing="false" onAction="#cutAction" text="Cut">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="X" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="copyButton" mnemonicParsing="false" onAction="#copyAction" text="Copy">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="pasteButton" mnemonicParsing="false" onAction="#pasteAction" text="Paste">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false"/>
+                        <MenuItem fx:id="selectAllButton" mnemonicParsing="false" onAction="#selectAllAction"
+                                  text="Select All">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="A" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="deselectButton" mnemonicParsing="false" onAction="#deselectAction"
+                                  text="Deselect">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="C" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="MenuType" text="Code">
+                    <items>
+                        <Menu fx:id="syntaxModeDrop" mnemonicParsing="false" styleClass="MenuButton" text="Syntax Mode"/>
+                        <MenuItem fx:id="compileButton" mnemonicParsing="false" onAction="#compileAction"
+                                  text="Compile">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="B" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="runButton" mnemonicParsing="false" onAction="#runAction" text="Run">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="R" control="DOWN" meta="UP" shift="UP"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                        <MenuItem fx:id="viewHTMLButton" mnemonicParsing="false" onAction="#toggleHTMLAction"
+                                  text="Toggle HTML View">
+                            <accelerator>
+                                <KeyCodeCombination alt="UP" code="V" control="DOWN" meta="UP" shift="DOWN"
+                                                    shortcut="UP"/>
+                            </accelerator>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="MenuType" text="Window">
+                    <items>
+                        <MenuItem fx:id="fileViewButton" mnemonicParsing="false" onAction="#toggleFileView"
+                                  text="Toggle File List"/>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" styleClass="MenuType" text="Help">
+                    <items>
+                        <MenuItem fx:id="aboutButton" mnemonicParsing="false" onAction="#openAboutPage"
+                                  text="About App"/>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <AnchorPane id="fileView" maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0"
+                    VBox.vgrow="ALWAYS">
+            <children>
+                <SplitPane id="split" fx:id="splitPane" dividerPositions="0.2" prefHeight="372.0" prefWidth="640.0"
+                           AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                           AnchorPane.topAnchor="0.0">
+                    <items>
+                        <AnchorPane fx:id="treeAnchor" minHeight="0.0" minWidth="0.0" prefHeight="160.0"
+                                    prefWidth="100.0">
+                            <children>
+                                <FileTree id="fileTree" fx:id="fileTree" prefHeight="370.0" prefWidth="186.0"
+                                          styleClass="FileTree" AnchorPane.bottomAnchor="0.0"
+                                          AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0"
+                                          AnchorPane.topAnchor="0.0"/>
+                            </children>
+                            <opaqueInsets>
+                                <Insets/>
+                            </opaqueInsets>
+                        </AnchorPane>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+                            <children>
+                                <IDEPane fx:id="tabPane" layoutX="292.0" layoutY="209.0" prefHeight="869.0"
+                                         prefWidth="1018.0" styleClass="TabHolder" tabClosingPolicy="ALL_TABS"
+                                         AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                                         AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                </IDEPane>
+                            </children>
+                        </AnchorPane>
+                    </items>
+                </SplitPane>
+            </children>
+            <opaqueInsets>
+                <Insets/>
+            </opaqueInsets>
+        </AnchorPane>
+    </children>
+</VBox>

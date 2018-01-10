@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="IDE.GUI.Controllers.AboutController">
+    <children>
+        <Label text="About Astro" textAlignment="CENTER">
+            <font>
+                <Font name="Arial" size="25.0" />
+            </font>
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Label>
+      <Label text="Development by Josh McFarlin">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Label>
+      <Label text="Written in Java">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Label>
+      <Label text="Syntax highlighting thanks to SyntaxTextAreaFX">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+      <Label text="Contact me on Github">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin>
+      </Label>
+        <Button fx:id="closeButton" mnemonicParsing="false" onMouseClicked="#closeWindow" text="Close" textAlignment="CENTER">
+            <VBox.margin>
+                <Insets top="10.0" />
+            </VBox.margin>
+        </Button>
+    </children>
+</VBox>
