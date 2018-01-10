@@ -166,4 +166,8 @@ public class CodeEditor extends SplitPane {
             searching = false;
         }
     }
+
+    public static void main(String[] args) {
+        System.out.println(String.join("\n* ", modes));
+    }
 }

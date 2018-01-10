@@ -1,7 +1,5 @@
 package IDE.GUI.Components;
 
-import IDE.Utils.Permissions;
-import IDE.Utils.RecentFileList;
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Parent;
 import javafx.scene.control.SplitPane;
