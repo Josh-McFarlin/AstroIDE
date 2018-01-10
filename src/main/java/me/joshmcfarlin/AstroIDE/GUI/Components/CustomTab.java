@@ -1,6 +1,6 @@
-package IDE.GUI.Components;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Components;
 
-import IDE.Utils.Permissions;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.Permissions;
 import javafx.scene.control.Tab;
 
 public abstract class CustomTab extends Tab {

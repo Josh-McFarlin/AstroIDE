@@ -1,4 +1,4 @@
-package IDE.GUI.Components;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Components;
 
 import javafx.scene.control.*;
 import javafx.scene.image.Image;

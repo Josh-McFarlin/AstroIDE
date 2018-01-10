@@ -1,4 +1,4 @@
-package IDE.GUI.Controllers;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Controllers;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

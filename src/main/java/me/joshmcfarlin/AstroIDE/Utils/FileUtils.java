@@ -1,4 +1,4 @@
-package IDE.Utils;
+package main.java.me.joshmcfarlin.AstroIDE.Utils;
 
 import java.io.File;
 
@@ -20,6 +20,10 @@ public class FileUtils {
 
     public static File settingsDirectory() {
         return new File(mainDirectory().getAbsolutePath() + "/Settings");
+    }
+
+    public static File recentFilesStore() {
+        return new File(settingsDirectory().getAbsolutePath() + "/recent.txt");
     }
 
     public static File pluginsDirectory() {

@@ -1,4 +1,4 @@
-package IDE.GUI.Components;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Components;
 
 import javafx.embed.swing.SwingFXUtils;
 import javafx.scene.Parent;
@@ -6,10 +6,12 @@ import javafx.scene.control.SplitPane;
 import javafx.scene.control.Tab;
 import javafx.scene.control.TabPane;
 import javafx.scene.image.ImageView;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.Permissions;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.RecentFileList;
+
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
-import java.io.IOException;
 import java.util.Arrays;
 
 public class IDEPane extends TabPane {

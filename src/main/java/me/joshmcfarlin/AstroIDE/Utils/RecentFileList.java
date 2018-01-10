@@ -1,4 +1,4 @@
-package IDE.Utils;
+package main.java.me.joshmcfarlin.AstroIDE.Utils;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,16 +11,20 @@ public class RecentFileList {
     public static ObservableList<File> recentFiles = FXCollections.observableArrayList();
 
     public static void loadRecent() throws IOException, ClassNotFoundException {
-        File recent = new File("recent.txt");
+        File recent = FileUtils.recentFilesStore();
         recent.createNewFile();
         FileInputStream in = new FileInputStream(recent);
-        ObjectInputStream s = new ObjectInputStream(in);
-        addAllRecent((List<File>) s.readObject());
-        System.out.println(recentFiles);
+        try {
+            ObjectInputStream s = new ObjectInputStream(in);
+            addAllRecent((List<File>) s.readObject());
+            System.out.println(recentFiles);
+        } catch (EOFException e) {
+            System.out.println("No recent files.");
+        }
     }
 
     public static void saveRecent() throws IOException {
-        FileOutputStream f = new FileOutputStream("recent.txt");
+        FileOutputStream f = new FileOutputStream(FileUtils.recentFilesStore().getAbsolutePath());
         ObjectOutput s = new ObjectOutputStream(f);
         s.writeObject(new ArrayList<>(recentFiles));
     }

@@ -1,6 +1,6 @@
-package IDE;
+package main.java.me.joshmcfarlin.AstroIDE;
 
-import IDE.GUI.Controllers.AppController;
+import main.java.me.joshmcfarlin.AstroIDE.GUI.Controllers.AppController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,10 +11,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("/IDE/GUI/Resources/FXML/IDE.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("/main/java/me/joshmcfarlin/AstroIDE/GUI/Resources/FXML/IDE.fxml"));
         primaryStage.setTitle("Astro");
         Scene scene = new Scene(root, 1280, 900);
-        scene.getStylesheets().add(AppController.class.getResource("/IDE/GUI/Resources/CSS/Default.css").toExternalForm());
+        scene.getStylesheets().add(AppController.class.getResource("/main/java/me/joshmcfarlin/AstroIDE/GUI/Resources/CSS/Default.css").toExternalForm());
         primaryStage.setScene(scene);
         primaryStage.show();
     }

@@ -4,3 +4,4 @@ modules.xml
 *.iml
 recent.txt
 .gradle
+.DS_STORE

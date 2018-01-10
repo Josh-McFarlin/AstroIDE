@@ -1,12 +1,12 @@
-package IDE.GUI.Controllers;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Controllers;
 
 import java.awt.*;
 import java.io.IOException;
 import java.util.*;
-import IDE.GUI.Components.*;
-import IDE.Utils.ImageSelection;
-import IDE.Utils.Permissions;
-import IDE.Utils.RecentFileList;
+import main.java.me.joshmcfarlin.AstroIDE.GUI.Components.*;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.ImageSelection;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.Permissions;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.RecentFileList;
 import javafx.application.Platform;
 import javafx.collections.*;
 import javafx.fxml.FXML;
@@ -57,7 +57,7 @@ public class AppController implements Serializable {
     private Menu syntaxModeDrop;
 
     // Vars
-    private Image icon = new Image(getClass().getResourceAsStream("/IDE/GUI/Resources/Images/folder.png"));
+    private Image icon = new Image(getClass().getResourceAsStream("/main/java/me/joshmcfarlin/AstroIDE/GUI/Resources/Images/folder.png"));
 
     private File currentFile;
 

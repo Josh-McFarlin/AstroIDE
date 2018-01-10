@@ -1,4 +1,4 @@
-package IDE.Utils;
+package main.java.me.joshmcfarlin.AstroIDE.Utils;
 
 import java.awt.*;
 import java.awt.datatransfer.DataFlavor;

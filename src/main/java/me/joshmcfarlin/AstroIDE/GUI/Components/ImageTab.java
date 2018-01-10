@@ -1,6 +1,6 @@
-package IDE.GUI.Components;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Components;
 
-import IDE.Utils.Permissions;
+import main.java.me.joshmcfarlin.AstroIDE.Utils.Permissions;
 import javafx.geometry.Pos;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;

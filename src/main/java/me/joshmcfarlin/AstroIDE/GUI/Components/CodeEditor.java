@@ -1,4 +1,4 @@
-package IDE.GUI.Components;
+package main.java.me.joshmcfarlin.AstroIDE.GUI.Components;
 
 import javafx.scene.control.SplitPane;
 import javafx.scene.web.WebView;
@@ -17,7 +17,7 @@ import java.util.Arrays;
 
 public class CodeEditor extends SplitPane {
     private WebView webView = new WebView();
-    private URL htmlUrl = getClass().getResource("/IDE/GUI/Resources/CodeEditor/CodeEditor.html");
+    private URL htmlUrl = getClass().getResource("/main/java/me/joshmcfarlin/AstroIDE/GUI/Resources/CodeEditor/CodeEditor.html");
     private Clipboard clipboard = Toolkit.getDefaultToolkit().getSystemClipboard();
     private boolean searching;
     private int wrapLimit;
@@ -165,9 +165,5 @@ public class CodeEditor extends SplitPane {
             webView.getEngine().executeScript("editor.replaceAll('" + replace + "');");
             searching = false;
         }
-    }
-
-    public static void main(String[] args) {
-        System.out.println(String.join("\n* ", modes));
     }
 }

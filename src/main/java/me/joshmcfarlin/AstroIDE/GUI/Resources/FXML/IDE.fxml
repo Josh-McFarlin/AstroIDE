@@ -9,11 +9,11 @@
 <?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
-<?import IDE.GUI.Components.*?>
+<?import main.java.me.joshmcfarlin.AstroIDE.GUI.Components.*?>
 
 <VBox id="vBox" fx:id="vBox" prefHeight="900.0" prefWidth="1280.0" stylesheets="@../CSS/Default.css"
       xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="IDE.GUI.Controllers.AppController">
+      fx:controller="main.java.me.joshmcfarlin.AstroIDE.GUI.Controllers.AppController">
     <children>
         <MenuBar fx:id="menuBar" styleClass="MenuBar" VBox.vgrow="NEVER">
             <menus>
